@@ -1,12 +1,11 @@
 import urwid
 
+
 password = str()
 
 
 def is_very_long(password):
-    if len(password) < 12:
-        return False
-    return True
+    return len(password) >= 12
 
 
 def has_digit(password):
