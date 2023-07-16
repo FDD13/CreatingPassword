@@ -1,6 +1,5 @@
 import urwid
 
-
 password = str()
 
 
@@ -28,7 +27,9 @@ def has_symbols(password):
     return any(not i.isdigit() and not i.isalpha() for i in password)
 
 
-func_list = [
+def rating_score(password):
+    score = 0
+    func_list = [
     is_very_long,
     has_digit,
     has_letters,
@@ -36,10 +37,6 @@ func_list = [
     has_lower_letters,
     has_symbols
 ]
-
-
-def rating_score(password):
-    score = 0
     for func in func_list:
         if func(password):
             score += 2
