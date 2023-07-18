@@ -34,7 +34,7 @@ def rating_score(password):
     has_upper_letters,
     has_lower_letters,
     has_symbols
-]
+    ]
     for func in func_list:
         if func(password):
             score += 2
