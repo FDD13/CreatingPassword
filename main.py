@@ -28,12 +28,12 @@ def has_symbols(password):
 def rating_score(password):
     score = 0
     func_list = [
-    is_very_long,
-    has_digit,
-    has_letters,
-    has_upper_letters,
-    has_lower_letters,
-    has_symbols
+        is_very_long,
+        has_digit,
+        has_letters,
+        has_upper_letters,
+        has_lower_letters,
+        has_symbols
     ]
     for func in func_list:
         if func(password):
