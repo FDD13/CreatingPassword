@@ -1,7 +1,5 @@
 import urwid
 
-password = str()
-
 
 def is_very_long(password):
     return len(password) >= 12
@@ -50,7 +48,7 @@ def on_ask_change(reply, edit, new_edit_text):
 
 def main():
     ask = urwid.Edit('Введите пароль: ', mask='*')
-    reply = urwid.Text(password)
+    reply = urwid.Text("")
     menu = urwid.Pile([ask, reply])
     menu = urwid.Filler(menu, valign='top')
     urwid.connect_signal(ask, 'change', on_ask_change, weak_args=[reply])
